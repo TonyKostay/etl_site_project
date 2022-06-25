@@ -1,0 +1,129 @@
+@font-face{
+	font-family: 'Gotham400';
+	src: url('../fonts/Gotham-Book.ttf');
+	font-weight: 400;
+}
+
+@font-face{
+	font-family: 'Gotham500';
+	src: url('../fonts/Gotham-Medium.ttf');
+	font-weight: 500;
+}
+
+@font-face{
+	font-family: 'Gotham700';
+	src: url('../fonts/Gotham-Bold.ttf');
+	font-weight: 700;
+}
+
+//variables----------------------------------------
+$bg_color: #202425;
+$basic_color: #b0b0b0;
+$addition_color: #6D6D6D;
+$accent_color: #2850DE;
+$accent_hover-color:#08A3FA;
+
+$basic_font: 'Gotham400', sans-serif;
+$basic_fontSize:1rem;
+
+$subheader_font: 'Gotham500', sans-serif;
+$header_font: 'Gotham700', sans-serif;
+//-------------------------------------------------
+
+//reboot css---------------------------------------
+header, nav, body, section, li, ul{
+    padding: 0;
+    margin: 0;
+}
+a{
+    color:$basic_color;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+//-------------------------------------------------
+
+html{
+    background-color: $bg_color;
+    color: $basic_color;
+    font-family: $basic_font;
+    font-size: $basic_fontSize;
+}
+.button{
+    border-radius: 50px;
+    border: none;
+    transition: 300ms ease-in-out;
+    color: $basic_color;
+    font-family: $subheader_font;
+    &:hover{
+        color:#fff;
+    }
+}
+.wrapper{
+    margin: 0 auto;
+    padding: 0 3vw 0 3vw;
+    max-width: 1800px;
+}
+
+.main-header{
+    background-color: $bg_color;
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    &__nav-mobile{
+        display: none;
+    }
+    &__wrapper{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav-bar_items{
+        width: 900px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            a{
+                transition: 300ms ease-in-out;
+                &:hover{
+                color:#fff;
+                }
+            }
+        }
+    }
+    &__nav-bar-button{
+        width: 200px;
+        height: 48px;
+        background-color: $accent_color;
+        &:hover{
+            background-color: $accent_hover-color;
+        }
+    }
+}
+
+#phoneIcon{
+    position: relative;
+    top:3px;
+    width: 16px;
+}
+
+@media screen and (max-width: 1180px) {
+    .main-header{
+        &__nav-mobile{
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            background-color: $accent_color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__nav-bar_items{
+            display: none;
+        }
+        
+    }
+}
