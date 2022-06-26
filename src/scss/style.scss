@@ -17,7 +17,7 @@
 }
 
 //variables----------------------------------------
-$bg_color: #202425;
+$bg_color: #232323;
 $basic_color: #b0b0b0;
 $addition_color: #6D6D6D;
 $accent_color: #2850DE;
@@ -27,8 +27,10 @@ $basic_font: 'Gotham400', sans-serif;
 $basic_fontSize:1rem;
 
 $subheader_font: 'Gotham500', sans-serif;
+$subheader_fontSize:1.6rem;
+
 $header_font: 'Gotham700', sans-serif;
-//-------------------------------------------------
+$header_fontSize:3.5rem;
 
 //reboot css---------------------------------------
 header, nav, body, section, li, ul{
@@ -42,8 +44,8 @@ a{
 ul{
     list-style-type: none;
 }
-//-------------------------------------------------
 
+//basicStyles-------------------------------------------------
 html{
     background-color: $bg_color;
     color: $basic_color;
@@ -60,12 +62,17 @@ html{
         color:#fff;
     }
 }
+.header, h1{
+    font-size: $header_fontSize;
+    font-family: $header_font;
+}
 .wrapper{
     margin: 0 auto;
     padding: 0 3vw 0 3vw;
     max-width: 1800px;
 }
 
+//header-------------------------------------------------
 .main-header{
     background-color: $bg_color;
     width: 100vw;
@@ -110,6 +117,24 @@ html{
     width: 16px;
 }
 
+//firstScreen-------------------------------------------------
+.mainScreen{
+    padding-top: 100px;
+    height: calc(100vh - 100px);
+    width: 100vw;
+    background: url('../img/firstScreenBG.jpg') left bottom/cover no-repeat;
+    display: flex;
+    
+}
+.mainScreen__wrapper-content{
+    position:relative;
+    display: inline-block;
+    right: 0%;
+    bottom: 0%;
+}
+
+
+//mobile-------------------------------------------------
 @media screen and (max-width: 1180px) {
     .main-header{
         &__nav-mobile{
@@ -122,8 +147,19 @@ html{
             align-items: center;
         }
         &__nav-bar_items{
-            display: none;
+            display: flex;
+            transition: 300ms;
+            justify-content: space-around;
+            background-color: $bg_color;
+            z-index: 999;
+            position: fixed;
+            width: 300px;
+            transform: translate(100px, 0px);
+            flex-direction: column;
+            height: calc(100vh - 85px);
+            //display: none;
         }
         
     }
 }
+

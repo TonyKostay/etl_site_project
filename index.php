@@ -27,6 +27,10 @@
         </div>
     </header>
     <section class="mainScreen">
+        <!-- <div class="mainScreen__wrapper-content">
+            <h1 class='mainScreen__header header'>Умная подсветка<br>лестницы Волгоград</h1>
+            <a href=""><button class='mainScreen-button button'>Написать в WhatsApp</button></a>
+        </div> -->
     </section>
 </body>
 </html>
