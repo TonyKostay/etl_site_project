@@ -27,10 +27,23 @@
         </div>
     </header>
     <section class="mainScreen">
-        <!-- <div class="mainScreen__wrapper-content">
-            <h1 class='mainScreen__header header'>Умная подсветка<br>лестницы Волгоград</h1>
-            <a href=""><button class='mainScreen-button button'>Написать в WhatsApp</button></a>
-        </div> -->
+        <div class="mainScreen__wrapper wrapper">
+            <div class="mainScreen__wrapper-content">
+                <h1 class='mainScreen__header header'>Умная подсветка<br>лестницы Волгоград</h1>
+                <p>Легкий монтаж на готовую лестницу</p>
+                <a href=""><button class='mainScreen__button button'>Написать в WhatsApp</button></a>
+            </div>
+        </div>
     </section>
+    <!-- <section class="settings">
+        <div class="settings__wrapper wrapper">
+            <div class="settings__item">
+                <div class="setting__item-gradient">
+                    <span class="setting__item-subheader"></span>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section> -->
 </body>
 </html>
