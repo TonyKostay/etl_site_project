@@ -252,6 +252,26 @@ body{
     background: url('../img/auto.jpg') center center/cover no-repeat;
 }
 
+.about{
+    h2{
+        font-size: $header_fontSize;
+        font-family: $header_font;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5vw;
+    }
+    &__video{
+        width: 60vw;
+        padding: 2%;
+    }
+    video{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 //mobile-------------------------------------------------
 @media screen and (max-width: 1179px) {
     .main-header{

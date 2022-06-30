@@ -11,13 +11,13 @@
 <body>
     <header class="main-header">
         <div class="main-header__wrapper wrapper">
-            <img class="main-header___logo" src="src/img/logo.svg">
+            <img class="main-header___logo" src="src/img/icons/logo.svg">
             <nav class="main-header__nav-bar">
                 <div class="main-header__nav-mobile">
-                    <img src="src/img/menu-mobile.svg" alt="">
+                    <img src="src/img/icons/menu-mobile.svg" alt="">
                 </div>
                 <ul class="main-header__nav-bar_items">
-                    <li><img src="src/img/phone-icon.svg" id='phoneIcon'><a href="tel:+78142332211">+7 800-555-35-35</a></li>
+                    <li><img src="src/img/icons/phone-icon.svg" id='phoneIcon'><a href="tel:+78142332211">+7 800-555-35-35</a></li>
                     <li> <a href="">Преимущества</a></li>
                     <li><a href="">О продукте</a></li>
                     <li><a href="">Фото-портфолио</a></li>
@@ -91,16 +91,33 @@
             </div>
         </div>
     </section>
-    <section>
-        <div class="video-container">
-        <video autoplay muted loop>
-            <source src="" type="video/mp4" />
-        </video>
-        <div class="caption">
-        <h2>Your caption here</h2>
+    <section class='about'>
+        <div class="about__wrapper wrapper">
+            <div class="about__description-wrapper">
+                <h2>О продукте</h2>
+                <p>Собственное производство.
+                    Полный набор для быстрого, легкого и качественного монтажа.
+                    Светильники пониженного энергопотребления, уже нанесён качественный 3М скотч, для надёжного крепежа на деревянные, стеклянные, пластиковые и прочие поверхности. Так же в комплекте имеются клипсы для крепления на бетонные поверхности.
+                    Провода с коннекторами в комплекте.
+                    Лента уже вклеена в алюминиевый профиль и распаяна проводами оснащенными коннекторами и закрыта рассеивателем.
+                    Поддержка до 24 ступеней.
+                    Настройка плавности работы подсветки.
+                    Точка доступа прямо на контроллере.
+                    Настройка по WiFi без приложений.
+                    WiFi автоматически отключается через 30 минут (не загрязняет сеть лишней точкой доступа).
+                    Автоотключение системы при наличии достаточного освещения (отключаемая функция).
+                    Возможность долговременной работы от автономного источника питания, за счёт низкого энергопотребления.
+                    Стильный дизайн, без видимых болтов\саморезов.
+                </p>
+                <p>Остерегайтесь подделок светодиодной ленты. Используйте только оригинальную ленту ETL</p>
+            </div>
+            <div class="about__video">
+                <video autoplay muted loop controls >
+                    <source src="src/video/etl.mp4" type="video/mp4" />
+                </video>
+            </div>
+            
         </div>
-</div>
-    
     </section>
 </body>
 </html>

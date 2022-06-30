@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   let flag = true;
   navMobileButton.addEventListener('click', ()=>{
     if (flag){
-      navMobileButton.firstElementChild.src = 'src/img/menu-arrow.svg';
+      navMobileButton.firstElementChild.src = 'src/img/icons/menu-arrow.svg';
       navItems.style.transform = 'translate(-200px, 0px)';
       flag = false;
     }else{
-      navMobileButton.firstElementChild.src = 'src/img/menu-mobile.svg';
+      navMobileButton.firstElementChild.src = 'src/img/icons/menu-mobile.svg';
       navItems.style.transform = 'translate(300px, 0px)';
       flag = true;
     }
