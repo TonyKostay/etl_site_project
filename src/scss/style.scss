@@ -19,7 +19,7 @@
 //variables----------------------------------------
 $bg_color: #232323;
 $basic_color: #b0b0b0;
-$addition_color: #6D6D6D;
+$addition_color: #2E2D2D;
 $accent_color: #2850DE;
 $accent_hover-color:#08A3FA;
 
@@ -33,7 +33,7 @@ $header_font: 'Gotham700', sans-serif;
 $header_fontSize:3.5rem;
 
 //reboot css---------------------------------------
-header, nav, body, section, li, ul{
+header, nav, body, section, li, ul,h3{
     padding: 0;
     margin: 0;
 }
@@ -46,11 +46,32 @@ ul{
 }
 
 //basicStyles-------------------------------------------------
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $addition_color $bg_color;
+  }
+  
+  *::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    background: $bg_color;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: $addition_color;
+    border-radius: 5px;
+    border: 3px solid $bg_color;
+  }
+
 html{
     background-color: $bg_color;
     color: $basic_color;
     font-family: $basic_font;
     font-size: 16px;
+}
+body{
+    overflow-x: hidden;
 }
 .button{
     border-radius: 50px;
@@ -131,7 +152,7 @@ html{
         align-items: flex-end;
     }
     &__wrapper-content{
-        padding:0 5vh 10vh 0;
+        padding:0 3vw 10vh 0;
     }
     &__header{
         margin: 20px 0;
@@ -148,8 +169,88 @@ html{
         }
     }  
 }
+.advantages{
+    padding: 50px 0;
+    width: 100vw;
+    &__wrapper{
+        padding: 0 5vw;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+    &__item{
+        width: 28vw;
+        margin-bottom: 50px;
+        max-width: 550px;
+        max-height:600px ;
+        border-radius: 40px;
+        background-color: $addition_color;
+        box-shadow: 0 0 10px #1c1b1b;
+        transition: 300ms;
+        overflow: hidden;
+        &-desc{
+            padding: 10px 30px 30px 30px;
+        }
+        &-subheader{
+            font-family: $subheader_font;
+            font-size: 1.2rem;
+        }
+        &-button{
+            margin-top: 30px;
+            transform: translate(-15px, 0);
+            background-color: $accent_color;
+            color: $basic_color;
+            &:hover{
+                background-color:$accent_hover-color;
+            }
+        }
+        &:hover{
+            background-color:#333131;
+            transform: scale(1.01);
+        }
+    }
+    &__item-image{
+        position: relative;
+        top: -20px;
+        width: 28vw;
+        height:25vw;
+        max-width: 550px;
+        max-height:450px;
+    }
+}
 
-
+#interface, #instruction{
+    background-color: rgba(35,35,35, 0);
+    border-radius: 0;
+    box-shadow: none;
+    .advantages__item-desc{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    ul{
+        list-style-type:circle;
+        padding-left: 15px;
+    }
+    &:hover{
+        transform: translate(0,0);
+        background-color: rgba(35,35,35, 0);
+    }
+}
+#item-2{
+    background: url('../img/config.jpg') center center/cover no-repeat;
+}
+#item-3{
+    background: url('../img/children.jpg') center center/cover no-repeat;
+}
+#item-6{
+    background: url('../img/assemblage.jpg') center center/cover no-repeat;
+}
+#item-5{
+    background: url('../img/auto.jpg') center center/cover no-repeat;
+}
 
 //mobile-------------------------------------------------
 @media screen and (max-width: 1179px) {
@@ -184,7 +285,28 @@ html{
             padding:10vh 0 0 2vw;
         }
     }
+    .advantages{
+        &__item{
+            width: 42vw;
+            &-image{
+                width: 42vw;
+            }
+        }
+    }
+    #interface{
+        order: -2;
+    }
+    #instruction{
+        order: -1;
+        .advantages__item-desc{
+            padding-top: 30px;
+            justify-content: flex-start;
+        }
+
+    }
+
 }
+
 @media (max-height:500px),(max-width:390px){
     .mainScreen{
         &__header{
@@ -204,6 +326,21 @@ html{
         }
         &__wrapper-content{
             padding:0 5vh 10vh 0;
+        }
+    }
+}
+@media screen and (max-width:700px){
+    .advantages{
+        &__wrapper{
+            justify-content: center;
+        }
+        &__item{
+            width: 90vw;
+            border-radius: 30px;
+            &-image{
+                width: 90vw;
+                height: 300px;
+            }
         }
     }
 }
