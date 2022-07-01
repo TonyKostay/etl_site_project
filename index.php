@@ -18,10 +18,10 @@
                 </div>
                 <ul class="main-header__nav-bar_items">
                     <li><img src="src/img/icons/phone-icon.svg" id='phoneIcon'><a href="tel:+78142332211">+7 800-555-35-35</a></li>
-                    <li> <a href="">Преимущества</a></li>
-                    <li><a href="">О продукте</a></li>
+                    <li> <a href="#advantages">Преимущества</a></li>
+                    <li><a href="#about">О продукте</a></li>
                     <li><a href="">Фото-портфолио</a></li>
-                    <li><a href=""><button class='main-header__nav-bar-button button'>Написать в WhatsApp</button></a></li>
+                    <li><a href="" class='main-header__nav-bar-button button'>Написать в WhatsApp</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,11 +31,11 @@
             <div class="mainScreen__wrapper-content">
                 <h1 class='mainScreen__header header'>Умная подсветка<br>лестницы Волгоград</h1>
                 <p>Легкий монтаж на готовую лестницу</p>
-                <a href=""><button class='mainScreen__button button'>Написать в WhatsApp</button></a>
+                <a href="" class='mainScreen__button button'>Написать в WhatsApp</a>
             </div>
         </div>
     </div>
-    <section class="advantages">
+    <section class="advantages" id="advantages">
         <div class="advantages__wrapper wrapper">
             <div class="advantages__item" id="interface">
                 <div class="advantages__item-desc">
@@ -70,9 +70,11 @@
             </div>
             <div class="advantages__item" id='instruction'>
                 <div class="advantages__item-desc">
-                    <h3 class="advantages__item-subheader">Инструкция</h3>
-                    <p>Основа системы, отвечает за настройки включения, работы и выключения подсветки. Задает время и интенсивность свечения</p>
-                    <a href=""><button class='advantages__item-button button'>Скачать инструкцию</button></a>
+                    <div class="advantages__item-wrapper">
+                        <h3 class="advantages__item-subheader">Инструкция</h3>
+                        <p>Основа системы, отвечает за настройки включения, работы и выключения подсветки. Задает время и интенсивность свечения</p>
+                        <a href="files/manual-etl.pdf" class='advantages__item-button button'>Скачать инструкцию</a>
+                    </div>
                 </div>
             </div>
             <div class="advantages__item">
@@ -91,10 +93,10 @@
             </div>
         </div>
     </section>
-    <section class='about'>
+    <section class='about' id="about">
         <div class="about__wrapper wrapper">
             <div class="about__description-wrapper">
-                <h2>О продукте</h2>
+                <h2 class="about__header header">О продукте</h2>
                 <p>Собственное производство.
                     Полный набор для быстрого, легкого и качественного монтажа.
                     Светильники пониженного энергопотребления, уже нанесён качественный 3М скотч, для надёжного крепежа на деревянные, стеклянные, пластиковые и прочие поверхности. Так же в комплекте имеются клипсы для крепления на бетонные поверхности.
@@ -116,7 +118,50 @@
                     <source src="src/video/etl.mp4" type="video/mp4" />
                 </video>
             </div>
-            
+        </div>
+    </section>
+    <section class="equipment">
+        <div class="equipment__wrapper wrapper">
+            <h2 class="equipment__header header">Комплект оборудования</h2>
+            <div class="equipment__content-wrapper">
+                <div class="equipment__kit kit-v" id="kit-1">
+                    <div class="equipment__kit-wrapper">
+                        <img src="src/img/controller.png" alt="">
+                        <div class="equipment__kit-description">
+                            <h3 class="equipment__kit-subheader">Контроллер ETL</h3>
+                            <p>Основа системы, отвечает за настройки включения, работы и выключения подсветки. Задает время и интенсивность свечения, защищен от замыкания</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="equipment__kit kit-h" id="kit-2">
+                    <div class="equipment__kit-wrapper">
+                        <img src="src/img/sensors.png" alt="">
+                        <div class="equipment__kit-description">
+                            <h3 class="equipment__kit-subheader">Датчики движения и освещенности</h3>
+                            <p>Отвечают за отслеживание перемещения и общее освещение в комнате.
+                                Когда человек подходит к лестнице и вокруг темно — передают сигнал контроллеру о включении подсветки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="equipment__kit kit-v" id="kit-3">
+                    <div class="equipment__kit-wrapper">
+                        <img src="src/img/luminaire.png" alt="">
+                        <div class="equipment__kit-description">
+                            <h3 class="equipment__kit-subheader">Светильники с распаянным проводом</h3>
+                            <p>Устройства собственного производства с пониженным электропотреблением 3 ватта на ступень и гарантией 5 лет</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="equipment__kit kit-h" id="kit-4">
+                    <div class="equipment__kit-wrapper">
+                        <img src="src/img/wires.png" alt="">
+                        <div class="equipment__kit-description">
+                            <h3 class="equipment__kit-subheader">Провода и клеммы</h3>
+                            <p>Вся мелочь для монтажа и соединения</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </body>
