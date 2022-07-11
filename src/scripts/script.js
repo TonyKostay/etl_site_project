@@ -13,16 +13,33 @@ document.addEventListener('DOMContentLoaded', ()=>{
       flag = true;
     }
   });
-  const anchors = document.querySelectorAll('a[href*="#"]')
+  const anchors = document.querySelectorAll('a[href*="#"]');
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    const blockID = anchor.getAttribute('href').substr(1)
+    e.preventDefault();
+    const blockID = anchor.getAttribute('href').substr(1);
     
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
       block: 'nearest'
-      })
-    })
+      });
+    });
   }
+
+  const showSlider = new Swiper('.swiper',{
+    effect: 'coverflow',
+    grabCursor: true,
+    loop: true,
+    speed: 1800, 
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect:{
+      rotate:50,
+      stretch:0,
+      depth:100,
+      modifier:1,
+      slideShadows:true,
+    }
+  });
+
 });

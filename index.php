@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css"> -->
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="src/css/style.min.css">
     <script src="src/scripts/script.js"></script>
     <title>ETL</title>
@@ -164,5 +166,41 @@
             </div>
         </div>
     </section>
+    <section class='portfolio'>
+        <div class="portfolio__wrapper wrapper">
+            <h2 class='portfolio__header header'>Наши работы</h2>
+            <div class="portfolio__slider">
+                <div class="portfolio__swiper swiper">
+                    <div class="portfolio__swiper-wrapper swiper-wrapper">
+                        <div class="swiper-slide" id='slide-1'>
+                            <img src="src/img/sliderImg/DSC_2772.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide" id='slide-2'>
+                            <img src="src/img/sliderImg/DSC_2816-1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide" id='slide-3'>
+                            <img src="src/img/sliderImg/DSC_3140.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide" id='slide-4'>
+                            <img src="src/img/sliderImg/DSC_3239.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide" id='slide-5'>
+                            <img src="src/img/sliderImg/DSC_3264.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide" id='slide-6'>
+                            <img src="src/img/sliderImg/DSC_3331.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='cooperation'>
+        <div class="cooperation__wrapper wrapper">
+            <h2 class="cooperation__header header">Приглашаем к сотрудничеству</h2>
+            
+        </div>
+    </section>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
