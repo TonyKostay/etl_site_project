@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   navMobileButton.addEventListener('click', ()=>{
     if (flag){
       navMobileButton.firstElementChild.src = 'src/img/icons/menu-arrow.svg';
-      navItems.style.transform = 'translate(-200px, 0px)';
+      navItems.style.transform = 'translate(-300px, 0px)';
       flag = false;
     }else{
       navMobileButton.firstElementChild.src = 'src/img/icons/menu-mobile.svg';
@@ -41,5 +41,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
       slideShadows:true,
     }
   });
+
+  $(document).ready(function() {
+    $('.questions__accordeon .acc-head').on('click', f_acc);
+  });
+   
+  function f_acc(){
+    $('.questions__accordeon .acc-body').not($(this).next()).slideUp(300);
+    $(this).next().slideToggle(300);
+  }
 
 });
