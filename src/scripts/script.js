@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
   navMobileButton.addEventListener('click', ()=>{
     if (flag){
       navMobileButton.firstElementChild.src = 'src/img/icons/menu-arrow.svg';
-      navItems.style.transform = 'translate(-300px, 0px)';
+      navItems.style.transform = 'translate(-150px, 0px)';
       flag = false;
+      document.body.style.overflowY = 'hidden';
     }else{
       navMobileButton.firstElementChild.src = 'src/img/icons/menu-mobile.svg';
       navItems.style.transform = 'translate(300px, 0px)';
+      document.body.style.overflowY = 'visible';
       flag = true;
     }
   });
