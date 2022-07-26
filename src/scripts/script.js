@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
-      block: 'nearest'
+      block: 'start'
       });
     });
   }
